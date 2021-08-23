@@ -14,7 +14,7 @@
 
 ### Overview: 
 
-In this working project, I analyzed topic patterns in hate speech data taken from Twitter. Using Latent Dirichlet allocation, I modeled the topics present in posts that were coded as hate speech. I then visualized 36 of those topics, interpreted the topics, and finally came to concluions about patterns in the topics represent. I plan to return to this analysis at a later date. 
+In this working project, I analyzed topic patterns in hate speech data taken from Twitter. Using Latent Dirichlet allocation, I modeled the topics present in posts that were coded as hate speech. I then visualized 36 of those topics, interpreted the topics, and finally came to conclusions about patterns in the topics represent. I plan to return to this analysis at a later date. 
 
 Note: The scripts in the pull request are not needed to replicate this analysis. Simply run the .Rmd. I used them initially for coding (I prefer the interface) and include them as a matter of practice. 
 
