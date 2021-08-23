@@ -1,5 +1,5 @@
 ---
-title: "Hate Speech Report"
+title: "A Topic Modeling Analysis of Hate Speech on Twitter"
 output: github_document
 github_document:
     toc: true
