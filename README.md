@@ -20,10 +20,10 @@ Note: The scripts in the pull request are not needed to replicate this analysis.
 
 ### Links to Relevant Documents:  
 
-* [hate-speech-report.Rmd](https://github.com/zanderarnao/hw09/blob/ab688b727c325a3e4647192bca188815cadc2141/hate-speech-report.Rmd)
+* [hate-speech-report.md](https://github.com/zanderarnao/Twitter-Hate-Speech/blob/95391f375c79bb07a132cd4d6356b7d67c18c720/hate-speech-report.md)
 
-* [hate-speech-report.md](https://github.com/zanderarnao/hw09/blob/ab688b727c325a3e4647192bca188815cadc2141/hate-speech-report.md)
+* [topic-catalogue.md](https://github.com/zanderarnao/Twitter-Hate-Speech/blob/95391f375c79bb07a132cd4d6356b7d67c18c720/Scripts%20and%20Catalogs/topic-catalogue.md)
 
-* [topic-catalogue.Rmd](https://github.com/zanderarnao/hw09/blob/ab688b727c325a3e4647192bca188815cadc2141/topic-catalogue.Rmd)
+* [hate-speech-report.Rmd](https://github.com/zanderarnao/Twitter-Hate-Speech/blob/95391f375c79bb07a132cd4d6356b7d67c18c720/hate-speech-report.Rmd)
 
-* [topic-catalogue.md](https://github.com/zanderarnao/hw09/blob/ab688b727c325a3e4647192bca188815cadc2141/topic-catalogue.md)
+* [topic-catalogue.Rmd](https://github.com/zanderarnao/Twitter-Hate-Speech/blob/95391f375c79bb07a132cd4d6356b7d67c18c720/Scripts%20and%20Catalogs/topic-catalogue.Rmd)
