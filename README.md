@@ -11,6 +11,7 @@
 * library(topicmodels)
 * library(furrr)
 * library(textrecipes)
+* library(stopwords)
 
 ### Overview: 
 

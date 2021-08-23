@@ -4,9 +4,8 @@ Hate Speech Report
 ### WARNING
 
 The following assignment focuses on online hate speech, which is often
-racist, misogynistic, ableist, and basically hurtful in many ways. If
-seeing this content offends you, please speak with Dr. Soltoff about
-reassignment of grading.
+racist, misogynistic, ableist, and basically harmful to many people. If
+seeing this content offends you, please read no further.
 
 ### Overview of our Data
 
@@ -14,7 +13,7 @@ Online hate speech leads to [real world
 violence](https://www.washingtonpost.com/nation/2018/11/30/how-online-hate-speech-is-fueling-real-life-violence/).
 In the United States, [various
 groups](https://homepages.dcc.ufmg.br/~fabricio/download/silva-mondal.pdf)
-– from racial and sexual minorities to fat people – are regularly
+– from racial and sexual minorities to overweight people – are regularly
 targeted and shamed by trolls, and internationally, rising hate speech
 has been a precusror to
 [multiple](https://www.theatlantic.com/ideas/archive/2019/04/rwanda-shows-how-hateful-speech-leads-violence/587041/)
@@ -24,8 +23,8 @@ around the world; understanding the types of content put out by hateful
 trolls who shame vulnerable groups is crucial to addressing this harm.
 
 In the spirit of this endeavor, I use Latent Dirichlet allocation (LDA)
-to analyze analyze the topics present in a large data set of hate speech
-on Twitter. LDA is a form of unsupervised machine learning which assumes
+to analyze the topics present in a large data set of hate speech on
+Twitter. LDA is a form of unsupervised machine learning which assumes
 documents are a mix of hidden (latent) topics found across the whole
 corpus; it traces from particular tokens and documents back to the
 corpus’s overall topic structure, revealing associations that may point
@@ -33,18 +32,19 @@ to independent themes.
 
 Here I apply this method to [Thomas
 Davidson’s](https://github.com/t-davidson/hate-speech-and-offensive-language)
-open source sample of possible hate speech. As the GitHub explains, he
-scraped more than 20,000 Twitter posts that used language found in
-[Hatebase’s](https://hatebase.org) hate speech lexicon and employed a
-team of research assistants (RA’s) to manually code said posts into one
-of three categories: hate speech, offensive language, or neither.
+open source sample of potential Twitter hate speech. As the GitHub
+explains, he scraped more than 20,000 Twitter posts that used language
+found in [Hatebase’s](https://hatebase.org) hate speech lexicon and
+employed a team of research assistants (RA’s) to manually code said
+posts into one of three categories: hate speech, offensive language, or
+neither.
 
 Below I explore the posts coded as “hate speech”. I originally intended
 to perform topic analysis on posts where the RA’s determinations were
-divided vs. in consensus and then on hate speech vs. offensive language,
-but separate obstacles impeded each of those efforts, inducing me to
-narrow my focus to hate speech generally. I elaborate on these decisions
-below, but first – our data.
+divided vs. in consensus and then on hate speech vs. offensive language
+(the posts that were not hate speech), but separate obstacles impeded
+each of those efforts, inducing me to narrow my focus to hate speech
+generally. I elaborate on these decisions below, but first – our data.
 
 ``` r
 # download .csv from GitHub
@@ -97,7 +97,7 @@ and then perform our topic model analysis.
 We are dealing with three variables here: `consensus`, `class`, and
 `tweet`. The labeling of “hate speech” vs. “offensive language” is
 crucial for this analysis, so we will briefly dig into the patterns of
-content labeling. First, I communicate the share of content in each
+content labeling. First, I explore the share of content in each
 category.
 
 ``` r
@@ -181,7 +181,7 @@ hs_data_clean %>%
 
 ![](hate-speech-report_files/figure-gfm/consensus%20by%20category-1.png)<!-- -->
 
-The table and bar chart above communicate a very interesting fact: the
+The table and bar chart above tell us something very interesting: the
 vast majority of hate speech determinations were divided. More than 80%
 of all hate speech determinations were divided, compared with the 31 and
 25% of neither and offensive langauge. It seems that hate speech
@@ -205,8 +205,8 @@ thematic groups. I picked the “best” model, that is, the one with the
 lowest perplexity score (a statistical measure of the model’s accuracy)
 and then visualize the top 5 words associated with 30 of the topics. I
 analyze patterns in the recognizable topic grouping and then conclude
-with major takeaways as well as where my analysis could go from here (I
-will certainly circle back to this).
+with major takeaways as well as where my analysis could go from here. (I
+will certainly circle back to this.)
 
 Below I filter the data set for observations coded as hate speech and
 then define a function to create and then apply a recipe which returns
@@ -413,11 +413,13 @@ visualize_top_terms(hs_lda_compare, 5, 26, 37)
 ![](hate-speech-report_files/figure-gfm/top%20terms-3.png)<!-- -->
 
 The above plots can tell us many things about hate speech on Twitter.
-Please, refer to the topic catalogue for a list of my interpretation of
-the 36 topics visualized above. These interpretations will no doubt be
-suspect and very well even subjective. The LDA algorithm is also very
-spotty; many, perhaps the majority, of topics are not intelligible to
-me. In spite of these limitations, I list the 10 most notable here:
+Please, refer to the [topic
+catalog](https://github.com/zanderarnao/Twitter-Hate-Speech/blob/main/Scripts%20and%20Catalogs/topic-catalogue.md)
+for a list of my interpretation of the 36 topics visualized above. These
+interpretations will no doubt be suspect and very well even subjective.
+The LDA algorithm is also very spotty; many, perhaps the majority, of
+topics are not intelligible to me. In spite of these limitations, I list
+the 10 most notable here:
 
 -   2 - deriding the appearance of East Asian people
 -   4 - deriding LGBTQ+ people have families and children
